@@ -308,8 +308,8 @@
             const highestBatsman = batsmen.reduce((max, batsman) => max.runs > batsman.runs ? max : batsman, { runs: 0 });
             const highestBowler = bowlers.reduce((max, bowler) => max.wicketsTaken > bowler.wicketsTaken ? max : bowler, { wicketsTaken: 0 });
 
-            document.getElementById('highestBatsman').textContent = highestBatsman.name ? ${highestBatsman.name} (${highestBatsman.runs} runs) : 'N/A';
-            document.getElementById('highestBowler').textContent = highestBowler.name ? ${highestBowler.name} (${highestBowler.wicketsTaken} wickets) : 'N/A';
+            document.getElementById('highestBatsman').textContent = highestBatsman.name ? `${highestBatsman.name} (${highestBatsman.runs} runs)` : 'N/A';
+            document.getElementById('highestBowler').textContent = highestBowler.name ? `${highestBowler.name} (${highestBowler.wicketsTaken} wickets)` : 'N/A';
         }
 
         let runsChart = new Chart(document.getElementById('runsChart').getContext('2d'), {
